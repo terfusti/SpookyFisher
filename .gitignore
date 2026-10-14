@@ -1,0 +1,24 @@
+# Visual Studio and user-specific state
+.vs/
+**/.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build outputs and compiler artifacts
+**/bin/
+**/obj/
+**/ipch/
+TestResults/
+*.dll
+*.exe
+*.pdb
+*.obj
+*.ilk
+*.idb
+*.cache
+*.log
+
+# Restored NuGet package cache
+/packages/
