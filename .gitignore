@@ -1,10 +1,16 @@
 # Visual Studio and user-specific state
 .vs/
-**/.vs/
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
+*.VC.db
+*.VC.db-shm
+*.VC.db-wal
+*.VC.opendb
+*.sdf
+*.opensdf
+*.aps
 
 # Build outputs and compiler artifacts
 **/bin/
@@ -15,10 +21,26 @@ TestResults/
 *.exe
 *.pdb
 *.obj
+*.pch
 *.ilk
 *.idb
+*.iobj
+*.ipdb
+*.exp
+*.lib
+*.tlog
+*.lastbuildstate
 *.cache
+
+# Runtime diagnostics and temporary files
 *.log
+*.dmp
+*.mdmp
+*.stackdump
+*.tmp
 
 # Restored NuGet package cache
 /packages/
+
+# Machine-specific game reference paths
+/Local.props

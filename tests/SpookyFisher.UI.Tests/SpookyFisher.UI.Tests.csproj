@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AssemblyName>SpookyFisher.UI.Tests</AssemblyName>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <XnaAssemblyRoot>$(WINDIR)\Microsoft.NET\assembly\GAC_32</XnaAssemblyRoot>
+    <NativeUiDirectory Condition="'$(NativeUiDirectory)' == ''">..\..\bin\Win32\$(Configuration)</NativeUiDirectory>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.Xna.Framework">
+      <HintPath>$(XnaAssemblyRoot)\Microsoft.Xna.Framework\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics">
+      <HintPath>$(XnaAssemblyRoot)\Microsoft.Xna.Framework.Graphics\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Graphics.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Compile Include="Program.cs" />
+    <Compile Include="..\..\src\SpookyFisher.Managed\UI\NativeUi.cs" Link="UI\NativeUi.cs" />
+    <Compile Include="..\..\src\SpookyFisher.Managed\UI\XnaUiRenderer.cs" Link="UI\XnaUiRenderer.cs" />
+  </ItemGroup>
+  <Target Name="CopyNativeUi" AfterTargets="Build">
+    <!-- No managed payload is copied: the bootstrap worker safely stops at the missing-DLL check. -->
+    <Copy SourceFiles="$(NativeUiDirectory)\SpookyFisher.dll" DestinationFolder="$(OutputPath)" />
+  </Target>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

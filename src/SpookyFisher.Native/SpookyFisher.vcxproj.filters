@@ -5,6 +5,9 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="Third Party">
+      <UniqueIdentifier>{677580BC-6DD5-45C0-9F3E-029FE018787E}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
@@ -15,8 +18,28 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\third_party\imgui\imgui.cpp"><Filter>Third Party</Filter></ClCompile>
+    <ClCompile Include="..\..\third_party\imgui\imgui_draw.cpp"><Filter>Third Party</Filter></ClCompile>
+    <ClCompile Include="..\..\third_party\imgui\imgui_tables.cpp"><Filter>Third Party</Filter></ClCompile>
+    <ClCompile Include="..\..\third_party\imgui\imgui_widgets.cpp"><Filter>Third Party</Filter></ClCompile>
+    <ClCompile Include="..\..\third_party\imgui\backends\imgui_impl_win32.cpp"><Filter>Third Party</Filter></ClCompile>
+    <ClCompile Include="src\Overlay.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="src\FontAtlas.cpp"><Filter>Source Files</Filter></ClCompile>
+    <ClCompile Include="src\Bootstrap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="src\dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Overlay.h"><Filter>Header Files</Filter></ClInclude>
+    <ClInclude Include="src\FontAtlas.h"><Filter>Header Files</Filter></ClInclude>
+    <ClInclude Include="src\Bootstrap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\SpookyFisher.def"><Filter>Source Files</Filter></None>
   </ItemGroup>
 </Project>

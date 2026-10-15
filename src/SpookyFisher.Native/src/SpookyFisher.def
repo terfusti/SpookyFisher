@@ -1,0 +1,12 @@
+LIBRARY SpookyFisher
+EXPORTS
+    SF_UiInitialize
+    SF_UiShutdown
+    SF_UiCaptureInput
+    SF_UiVisible
+    SF_UiTakeActions
+    SF_UiSetFishing
+    SF_UiConfigureDisplay
+    SF_UiFont
+    SF_UiFrame
+    SF_Log
